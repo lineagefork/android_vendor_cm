@@ -223,12 +223,6 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank
-
-# Conditionally build in su
-ifeq ($(WITH_SU),true)
-PRODUCT_PACKAGES += \
-    su
-endif
 endif
 
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
@@ -351,6 +345,11 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cm.display.version=$(CM_DISPLAY_VERSION)
+
+# Copy Magisk zip
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/magisk.zip:system/addon.d/magisk.zip \
+    vendor/cm/prebuilt/common/app/MagiskManager.apk:system/priv-app/MagiskManager/MagiskManager.apk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/cm/config/partner_gms.mk
