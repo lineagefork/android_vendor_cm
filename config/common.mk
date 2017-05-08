@@ -351,6 +351,11 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/magisk.zip:system/addon.d/magisk.zip \
     vendor/cm/prebuilt/common/app/MagiskManager.apk:system/priv-app/MagiskManager/MagiskManager.apk
 
+# ThemeInterfacer
+PRODUCT_PACKAGES += \
+    ThemeInterfacer \
+    projekt.substratum.theme.xml
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/cm/config/partner_gms.mk
 -include vendor/cyngn/product.mk
