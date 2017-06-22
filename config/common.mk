@@ -348,8 +348,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Copy Magisk zip
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/magisk.zip:system/addon.d/magisk.zip \
-    vendor/cm/prebuilt/common/app/MagiskManager.apk:system/priv-app/MagiskManager/MagiskManager.apk
+    vendor/cm/prebuilt/common/magisk.zip:system/addon.d/magisk.zip
 
 # ThemeInterfacer
 PRODUCT_PACKAGES += \
