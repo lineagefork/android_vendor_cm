@@ -121,9 +121,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMSettingsProvider \
-    CMUpdater \
     LineageSetupWizard \
-    Eleven \
     ExactCalculator \
     Jelly \
     LiveLockScreenService \
